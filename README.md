@@ -24,11 +24,9 @@ Secrets are managed using 1Password CLI
   - Create docker-compose.yml
   - Create application-local.yml
 - Log into Apple ID
-- Chrome
-  - Sign in & turn off sync
-  - Set homepage
-  - Transfer bookmarks
-  - Install extensions
-- Install IntelliJ plugins
+- Finder view options > sort by "Snap to grid"
+- Move desktop dock to right side
+- IntelliJ sync
+- VSCode sync
 - Set keyboard shortcuts
   - ctrl -> command key mapping

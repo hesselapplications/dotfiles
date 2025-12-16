@@ -11,6 +11,7 @@ Afterwards, do the following:
 - [Chrome sync](https://support.google.com/chrome/answer/185277?hl=en&co=GENIE.Platform%3DDesktop#)
 - [VSCode sync](https://code.visualstudio.com/docs/configure/settings-sync)
 - [IntelliJ sync](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html)
+- [iCloud sync](https://support.apple.com/guide/mac-help/set-up-icloud-mh36834/mac)
 
 # 1Password
 Secrets are managed using 1Password CLI
@@ -19,16 +20,25 @@ Secrets are managed using 1Password CLI
 
 # TODO
 - Enable touch ID for sudo
+- Allow screen & system audio recording
+  - Chrome
+  - Loom
+  - Microsoft Teams
+  - Slack
+  - Zoom
 - Sign into VPN
 - Finder
   - Show path bar in finder
   - Add user home directories to favorites
   - Show hidden files
-- Tell screen to never sleep when plugged in
+- Settings
+  - Screen never sleep when plugged in
+  - Disable mouse natural scrolling
 - Clone ds1-configurations
   - Create docker-compose.yml
   - Create application-local.yml
 - Log into Apple ID
+- Set wallpaper
 - Finder view options > sort by "Snap to grid"
 - Move desktop dock to right side
 - Set keyboard shortcuts

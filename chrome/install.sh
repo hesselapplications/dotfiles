@@ -7,5 +7,6 @@ git clone git@github.com:MerrillCorporation/browser-extensions.git "$BROWSER_EXT
 
 https://peter.sh/experiments/chromium-command-line-switches/
 open -a "Google Chrome" --args --make-default-browser
+open -a "Google Chrome" chrome://extensions
 
 echo "Chrome setup complete. Remember to load & configure custom extensions!"

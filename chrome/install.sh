@@ -1,10 +1,14 @@
 echo "Setting up Chrome..."
-open -a "Google Chrome" --args --make-default-browser --silent-launch
 
 BROWSER_EXTENSIONS_DIR="$HOME/Documents/Repos/browser-extensions"
 git clone git@github.com:MerrillCorporation/browser-extensions.git "$BROWSER_EXTENSIONS_DIR"
-open -a "Google Chrome" --args --load-extension="$BROWSER_EXTENSIONS_DIR/swagger-registry" --silent-launch
-open -a "Google Chrome" --args --load-extension="$BROWSER_EXTENSIONS_DIR/swagger-auto-auth" --silent-launch
-open -a "Google Chrome" --args --load-extension="$BROWSER_EXTENSIONS_DIR/github-squad-search" --silent-launch
+killall "Google Chrome" &> /dev/null || echo "Chrome not running."
+open -a "Google Chrome" --args \
+  --silent-launch \
+  --no-first-run \
+  --make-default-browser \
+  --load-extension="$BROWSER_EXTENSIONS_DIR/swagger-registry" \
+  --load-extension="$BROWSER_EXTENSIONS_DIR/swagger-auto-auth" \
+  --load-extension="$BROWSER_EXTENSIONS_DIR/github-squad-search"
 
 echo "Chrome setup complete. Remember to configure the auto-auth extension!"

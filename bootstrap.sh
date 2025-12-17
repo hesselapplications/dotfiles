@@ -23,7 +23,7 @@ echo "Homebrew environment setup complete."
 
 echo "Cloning dotfiles repository..."
 brew install git
-REPO_DIR="$HOME/Documents/Repos/dotfiles"
+REPO_DIR="$HOME/Repos/dotfiles"
 rm -rf "$REPO_DIR"
 mkdir -p "$REPO_DIR"
 git clone --quiet https://github.com/hesselapplications/dotfiles.git "$REPO_DIR"

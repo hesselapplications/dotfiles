@@ -1,6 +1,6 @@
 # Docker compose aliases
-alias composeup='prev_dir=$(pwd) && cd ~/Documents/Repos/ds1-configurations && docker compose up -d && cd "$prev_dir"'
-alias composedown='prev_dir=$(pwd) && cd ~/Documents/Repos/ds1-configurations && docker compose down -v && cd "$prev_dir"'
+alias composeup='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose up -d && cd "$prev_dir"'
+alias composedown='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose down -v && cd "$prev_dir"'
 
 # K6 load tests
 export PASSWORD={{ op://Dotfiles/K6 Load Tests/credential }}

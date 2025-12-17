@@ -31,6 +31,7 @@ cask 'microsoft-teams'    # Messaging
 cask 'postman'            # API testing
 cask 'rectangle'          # Window management
 cask 'slack'              # Messaging
+cask 'spotify'            # Music
 cask 'studio-3t'          # MongoDB IDE
 cask 'visual-studio-code' # General purpose IDE
 cask 'zoom'               # Video conferencing

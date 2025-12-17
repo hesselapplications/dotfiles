@@ -27,3 +27,5 @@ mkdir -p "$HOME/Documents/Screenshots"
 defaults write com.apple.screencapture location -string "$HOME/Documents/Screenshots" # Save location
 defaults write com.apple.screencapture type -string "png" # Save format
 defaults write com.apple.screencapture disable-shadow -bool true # Disable shadow
+
+echo "MacOS setup complete."

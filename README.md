@@ -12,6 +12,8 @@ Afterwards, do the following:
 - [VSCode sync](https://code.visualstudio.com/docs/configure/settings-sync)
 - [IntelliJ sync](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html)
 - [iCloud sync](https://support.apple.com/guide/mac-help/set-up-icloud-mh36834/mac)
+- [Sign in to iCloud](https://support.apple.com/en-us/102314) to sync messages, contacts, notes, reminders and passwords
+- [Sign in to Google](https://support.apple.com/guide/mac-help/add-your-email-and-other-accounts-mh35565/mac) to sync contacts
 
 # 1Password
 Secrets are managed using 1Password CLI
@@ -37,7 +39,6 @@ Secrets are managed using 1Password CLI
 - Clone ds1-configurations
   - Create docker-compose.yml
   - Create application-local.yml
-- Log into Apple ID
 - Set wallpaper
 - Finder view options > sort by "Snap to grid"
 - Move desktop dock to right side

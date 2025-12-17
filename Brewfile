@@ -6,6 +6,7 @@ brew 'azure-cli'          # Azure
 brew 'cookiecutter'       # Project templating
 brew 'curl'               # Data transfer
 brew 'docker'             # Containers
+brew 'docker-compose'     # Containers
 brew 'gh'                 # GitHub
 brew 'git'                # Version control
 brew 'jq'                 # JSON processor
@@ -18,6 +19,7 @@ brew 'yq'                 # YAML processor
 # Applications
 cask '1password-cli'      # Password manager
 cask '1password'          # Password manager
+cask 'bitwarden'          # Password manager
 cask 'caffeine'           # Keep computer awake
 cask 'docker-desktop'     # Docker GUI
 cask 'freelens'           # K8s IDE

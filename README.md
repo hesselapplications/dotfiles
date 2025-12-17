@@ -24,6 +24,7 @@ Secrets are managed using 1Password CLI
 - Enable touch ID for sudo
 - Allow screen & system audio recording
   - Chrome
+  - DisplayLink Manager
   - Loom
   - Microsoft Teams
   - Slack

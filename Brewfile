@@ -15,6 +15,7 @@ brew 'kubelogin'                    # K8s auth helper
 brew 'kubernetes-cli'               # kubectl
 brew 'mongocli'                     # MongoDB CLI
 brew 'pyenv'                        # Python version manager
+brew 'scroll-reverser'              # Scroll direction manager
 brew 'wget'                         # Data transfer
 brew 'yq'                           # YAML processor
 
@@ -33,6 +34,7 @@ cask 'loom'                         # Screen recording
 cask 'microsoft-outlook'            # Email / calendar
 cask 'microsoft-teams'              # Messaging
 cask 'postman'                      # API testing
+cask 'raycast'                      # Launcher
 cask 'rectangle'                    # Window management
 cask 'slack'                        # Messaging
 cask 'spotify'                      # Music

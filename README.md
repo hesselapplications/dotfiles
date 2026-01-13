@@ -22,6 +22,7 @@ Secrets are managed using 1Password CLI
 
 # TODO
 - Enable touch ID for sudo
+- Turn off messages notifications sound
 - Allow screen & system audio recording
   - Chrome
   - DisplayLink Manager

@@ -13,7 +13,9 @@ brew 'git'                          # Version control
 brew 'jq'                           # JSON processor
 brew 'kubelogin'                    # K8s auth helper
 brew 'kubernetes-cli'               # kubectl
+brew 'mkcert'                       # Local SSL certs
 brew 'mongocli'                     # MongoDB CLI
+brew 'nss'                          # Local SSL certs
 brew 'pyenv'                        # Python version manager
 brew 'scroll-reverser'              # Scroll direction manager
 brew 'wget'                         # Data transfer

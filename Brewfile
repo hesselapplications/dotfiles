@@ -8,8 +8,10 @@ brew 'cookiecutter'                 # Project templating
 brew 'curl'                         # Data transfer
 brew 'docker'                       # Containers
 brew 'docker-compose'               # Containers
+brew 'deck'                         # Kong deck
 brew 'gh'                           # GitHub
 brew 'git'                          # Version control
+brew 'gpg'                          # Encryption
 brew 'jq'                           # JSON processor
 brew 'kubelogin'                    # K8s auth helper
 brew 'kubernetes-cli'               # kubectl

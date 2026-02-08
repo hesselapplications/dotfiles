@@ -34,6 +34,7 @@ cask 'gcloud-cli'                   # Google cloud
 cask 'google-chrome'                # Web browser
 cask 'intellij-idea'                # JVM IDE
 cask 'jetbrains-toolbox'            # JetBrains IDE manager
+cask 'logi-options+'                # Logitech device manager
 cask 'loom'                         # Screen recording
 cask 'microsoft-outlook'            # Email / calendar
 cask 'microsoft-teams'              # Messaging

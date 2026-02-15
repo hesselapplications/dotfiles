@@ -27,11 +27,11 @@ brew 'yq'                           # YAML processor
 cask '1password-cli'                # Password manager
 cask '1password'                    # Password manager
 cask 'bitwarden'                    # Password manager
+cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE
 cask 'gcloud-cli'                   # Google cloud
-cask 'google-chrome'                # Web browser
 cask 'intellij-idea'                # JVM IDE
 cask 'jetbrains-toolbox'            # JetBrains IDE manager
 cask 'logi-options+'                # Logitech device manager

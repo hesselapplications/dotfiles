@@ -1,3 +1,6 @@
+# Cursor
+PATH="$HOME/.local/bin:$PATH"
+
 # Docker compose aliases
 alias composeup='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose up -d && cd "$prev_dir"'
 alias composedown='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose down -v && cd "$prev_dir"'

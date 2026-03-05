@@ -30,6 +30,7 @@ cask 'bitwarden'                    # Password manager
 cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
 cask 'claude-code'                  # AI assistant
+cask 'cursor-cli`                   # Cursor AI assistant
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE
 cask 'gcloud-cli'                   # Google cloud

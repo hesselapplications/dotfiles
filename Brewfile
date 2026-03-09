@@ -5,6 +5,7 @@ cask_args appdir: "~/Applications", adopt: true
 brew 'azure-cli'                    # Azure
 brew 'Azure/kubelogin/kubelogin'    # K8s auth helper
 brew 'cookiecutter'                 # Project templating
+brew 'copilot-cli'                  # GitHub Copilot CLI
 brew 'curl'                         # Data transfer
 brew 'docker'                       # Containers
 brew 'docker-compose'               # Containers

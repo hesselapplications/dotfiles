@@ -3,6 +3,7 @@ cask_args appdir: "~/Applications", adopt: true
 
 # Taps
 tap 'LizardByte/homebrew'
+tap 'manaflow-ai/cmux'
 
 # CLI Tools
 brew 'azure-cli'                    # Azure
@@ -34,6 +35,7 @@ cask '1password'                    # Password manager
 cask 'bitwarden'                    # Password manager
 cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
+cask 'cmux'                         # Terminal multiplexer
 cask 'claude-code'                  # AI assistant
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE

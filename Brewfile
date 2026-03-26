@@ -1,6 +1,9 @@
 # Set arguments passed to all `brew install --cask` commands for `cask "..."`
 cask_args appdir: "~/Applications", adopt: true
 
+# Taps
+tap 'LizardByte/homebrew'
+
 # CLI Tools
 brew 'azure-cli'                    # Azure
 brew 'Azure/kubelogin/kubelogin'    # K8s auth helper
@@ -21,6 +24,7 @@ brew 'mongocli'                     # MongoDB CLI
 brew 'nss'                          # Local SSL certs
 brew 'pyenv'                        # Python version manager
 brew 'scroll-reverser'              # Scroll direction manager
+brew 'sunshine'                     # Game streaming host
 brew 'wget'                         # Data transfer
 brew 'yq'                           # YAML processor
 

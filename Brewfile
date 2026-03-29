@@ -2,8 +2,9 @@
 cask_args appdir: "~/Applications", adopt: true
 
 # Taps
-tap 'LizardByte/homebrew'
-tap 'manaflow-ai/cmux'
+tao 'jakehilborn/jakehilborn'       # Display placer for Sunshine
+tap 'LizardByte/homebrew'           # Sunshine
+tap 'manaflow-ai/cmux'              # Terminal multiplexer
 
 # CLI Tools
 brew 'azure-cli'                    # Azure
@@ -13,6 +14,7 @@ brew 'copilot-cli'                  # GitHub Copilot CLI
 brew 'curl'                         # Data transfer
 brew 'docker'                       # Containers
 brew 'docker-compose'               # Containers
+brew 'displayplacer'                # Display placer for Sunshine
 brew 'deck'                         # Kong deck
 brew 'gh'                           # GitHub
 brew 'git'                          # Version control

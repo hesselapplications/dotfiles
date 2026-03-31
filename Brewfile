@@ -42,6 +42,7 @@ cask 'claude-code'                  # AI assistant
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE
 cask 'gcloud-cli'                   # Google cloud
+cask 'handy'                        # Speech to text
 cask 'intellij-idea'                # JVM IDE
 cask 'jetbrains-toolbox'            # JetBrains IDE manager
 cask 'logi-options+'                # Logitech device manager

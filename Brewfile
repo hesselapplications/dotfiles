@@ -26,6 +26,7 @@ brew 'mkcert'                       # Local SSL certs
 brew 'mongocli'                     # MongoDB CLI
 brew 'nss'                          # Local SSL certs
 brew 'pyenv'                        # Python version manager
+brew 'ripgrep'                      # Code searching
 brew 'scroll-reverser'              # Scroll direction manager
 brew 'sunshine'                     # Game streaming host
 brew 'wget'                         # Data transfer

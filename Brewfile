@@ -2,7 +2,7 @@
 cask_args appdir: "~/Applications", adopt: true
 
 # Taps
-tao 'jakehilborn/jakehilborn'       # Display placer for Sunshine
+tap 'jakehilborn/jakehilborn'       # Display placer for Sunshine
 tap 'LizardByte/homebrew'           # Sunshine
 tap 'manaflow-ai/cmux'              # Terminal multiplexer
 

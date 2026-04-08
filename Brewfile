@@ -39,6 +39,7 @@ cask 'bitwarden'                    # Password manager
 cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
 cask 'cmux'                         # Terminal multiplexer
+cask 'cursor'                       # AI IDE
 cask 'claude-code'                  # AI assistant
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE

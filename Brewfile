@@ -16,12 +16,15 @@ brew 'docker'                       # Containers
 brew 'docker-compose'               # Containers
 brew 'displayplacer'                # Display placer for Sunshine
 brew 'deck'                         # Kong deck
+brew 'fd'                           # File searching
 brew 'gh'                           # GitHub
 brew 'git'                          # Version control
+brew 'git-delta'                    # Git diff viewer
 brew 'gpg'                          # Encryption
 brew 'jq'                           # JSON processor
 brew 'kubelogin'                    # K8s auth helper
 brew 'kubernetes-cli'               # kubectl
+brew 'lazygit'                      # Git CLI UI
 brew 'mkcert'                       # Local SSL certs
 brew 'mongocli'                     # MongoDB CLI
 brew 'nss'                          # Local SSL certs

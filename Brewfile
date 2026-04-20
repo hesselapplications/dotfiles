@@ -41,9 +41,10 @@ cask '1password'                    # Password manager
 cask 'bitwarden'                    # Password manager
 cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
+cask 'codex'                        # AI agent
+cask 'claude-code@latest'           # AI agent
 cask 'cmux'                         # Terminal multiplexer
 cask 'cursor'                       # AI IDE
-cask 'claude-code@latest'           # AI assistant
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE
 cask 'gcloud-cli'                   # Google cloud

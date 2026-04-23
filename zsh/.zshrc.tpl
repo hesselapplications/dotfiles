@@ -1,6 +1,9 @@
+# Uncomment both zprof lines to diagnose shell startup performance
+# zmodload zsh/zprof
+
 # Docker compose aliases
 alias composeup='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose up -d && cd "$prev_dir"'
-alias composedown='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose down -v && cd "$prev_dir"'
+alias composedown='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose down && docker volume ls -q --filter dangling=true | grep -v sourcebot | xargs -r docker volume rm > /dev/null; cd "$prev_dir"'
 
 # Google artifact registry
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/service-account-key.json
@@ -38,3 +41,5 @@ pyenv() {
 # Sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# zprof

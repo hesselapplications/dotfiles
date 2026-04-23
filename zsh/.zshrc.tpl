@@ -1,24 +1,24 @@
-# Cursor
-PATH="$HOME/.local/bin:$PATH"
-
 # Docker compose aliases
 alias composeup='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose up -d && cd "$prev_dir"'
 alias composedown='prev_dir=$(pwd) && cd ~/Repos/ds1-configurations && docker compose down -v && cd "$prev_dir"'
 
-# K6 load tests
-export PASSWORD={{ op://Dotfiles/K6 Load Tests/credential }}
-export K6_ENV=dev
-
-# OpenAI
-export OPENAI_API_KEY={{ op://Dotfiles/OpenAI/credential }}
-
 # Google artifact registry
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/service-account-key.json
 
-# Node version manager
+# Node version manager (lazy — defer 400ms load until first use)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+_load_nvm() {
+  unset -f nvm node npm npx yarn pnpm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+for _cmd in nvm node npm npx yarn pnpm; do
+  eval "${_cmd}() { _load_nvm; ${_cmd} \"\$@\"; }"
+done
+unset _cmd
+
+# Cursor
+PATH="$HOME/.local/bin:$PATH"
 
 # Docker
 export PATH="$HOME/.docker/bin:$PATH"

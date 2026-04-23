@@ -23,8 +23,11 @@ fi
 
 # Setup Homebrew environment
 echo "Setting up Homebrew environment..."
-echo >> "$OUTPUT_DIR/.zprofile"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$OUTPUT_DIR/.zprofile"
+BREW_SHELLENV_LINE='eval "$(/opt/homebrew/bin/brew shellenv)"'
+if ! grep -qxF "$BREW_SHELLENV_LINE" "$OUTPUT_DIR/.zprofile" 2>/dev/null; then
+  echo "" >> "$OUTPUT_DIR/.zprofile"
+  echo "$BREW_SHELLENV_LINE" >> "$OUTPUT_DIR/.zprofile"
+fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew analytics off
 echo "Homebrew environment setup complete."

@@ -23,10 +23,17 @@ PATH="$HOME/.local/bin:$PATH"
 # Docker
 export PATH="$HOME/.docker/bin:$PATH"
 
-# Pyenv
+# Pyenv — set up shims directly (skip 100ms subprocess init)
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+export PYENV_SHELL=zsh
+export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
+
+# Lazy-load the full pyenv function (needed only for `pyenv shell` / `pyenv rehash` / completions)
+pyenv() {
+  unset -f pyenv
+  eval "$(command pyenv init - zsh)"
+  pyenv "$@"
+}
 
 # Sdkman
 export SDKMAN_DIR="$HOME/.sdkman"

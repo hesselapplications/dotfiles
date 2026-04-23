@@ -38,8 +38,16 @@ pyenv() {
   pyenv "$@"
 }
 
-# Sdkman
+# SDKMAN — add candidate shims to PATH directly (skip ~1s init), lazy-load `sdk` on first use
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
+export KOTLIN_HOME="$SDKMAN_DIR/candidates/kotlin/current"
+export GRADLE_HOME="$SDKMAN_DIR/candidates/gradle/current"
+export PATH="$JAVA_HOME/bin:$KOTLIN_HOME/bin:$GRADLE_HOME/bin:$PATH"
+sdk() {
+  unset -f sdk
+  [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+  sdk "$@"
+}
 
 # zprof

@@ -26,3 +26,8 @@ fi
 
 mkdir -p "$OUTPUT_DIR"
 op read -o "$OUTPUT_DIR/.npmrc" "op://Dotfiles/NPM RC/.npmrc"
+
+DS_REGISTRY="@ds:registry=https://us-npm.pkg.dev/utils-prod-ds01/ds-npm/"
+if ! grep -qF "$DS_REGISTRY" "$OUTPUT_DIR/.npmrc" 2>/dev/null; then
+  echo "$DS_REGISTRY" >> "$OUTPUT_DIR/.npmrc"
+fi

@@ -42,6 +42,7 @@ cask 'bitwarden'                    # Password manager
 cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
 cask 'codex'                        # AI agent
+cask 'codex-app', args: { appdir: '/Applications' } # AI agent desktop app
 cask 'claude-code@latest'           # AI agent
 cask 'cmux'                         # Terminal multiplexer
 cask 'cursor'                       # AI IDE

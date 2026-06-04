@@ -4,7 +4,6 @@ cask_args appdir: "~/Applications", adopt: true
 # Taps
 tap 'jakehilborn/jakehilborn'       # Display placer for Sunshine
 tap 'LizardByte/homebrew'           # Sunshine
-tap 'manaflow-ai/cmux'              # Terminal multiplexer
 
 # CLI Tools
 brew 'azure-cli'                    # Azure
@@ -44,7 +43,6 @@ cask 'caffeine'                     # Keep computer awake
 cask 'codex'                        # AI agent
 cask 'codex-app', args: { appdir: '/Applications' } # AI agent desktop app
 cask 'claude-code@latest'           # AI agent
-cask 'cmux'                         # Terminal multiplexer
 cask 'cursor'                       # AI IDE
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE

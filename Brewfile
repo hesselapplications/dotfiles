@@ -38,7 +38,6 @@ brew 'yq'                           # YAML processor
 cask '1password-cli'                # Password manager
 cask '1password'                    # Password manager
 cask 'bitwarden'                    # Password manager
-cask 'brave-browser'                # Web browser
 cask 'caffeine'                     # Keep computer awake
 cask 'claude'                       # AI agent desktop app
 cask 'claude-code@latest'           # AI agent

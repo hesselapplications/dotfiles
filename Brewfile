@@ -48,6 +48,7 @@ cask 'cursor'                       # AI IDE
 cask 'docker-desktop'               # Docker GUI
 cask 'freelens'                     # K8s IDE
 cask 'gcloud-cli'                   # Google cloud
+cask 'google-chrome'                # Web browser
 cask 'handy'                        # Speech to text
 cask 'intellij-idea'                # JVM IDE
 cask 'jetbrains-toolbox'            # JetBrains IDE manager

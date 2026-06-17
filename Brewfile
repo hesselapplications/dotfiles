@@ -31,6 +31,7 @@ brew 'pyenv'                        # Python version manager
 brew 'ripgrep'                      # Code searching
 brew 'scroll-reverser'              # Scroll direction manager
 brew 'sunshine'                     # Game streaming host
+brew 'uv'                           # Python package manager
 brew 'wget'                         # Data transfer
 brew 'yq'                           # YAML processor
 

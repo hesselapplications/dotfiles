@@ -28,4 +28,23 @@ defaults write com.apple.screencapture location -string "$HOME/Documents/Screens
 defaults write com.apple.screencapture type -string "png" # Save format
 defaults write com.apple.screencapture disable-shadow -bool true # Disable shadow
 
+# Display layout
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+mkdir -p "$OUTPUT_DIR/.local/bin"
+restore_displays_tmp=$(mktemp "$OUTPUT_DIR/.local/bin/.restore-desk-displays.XXXXXX")
+install -m 755 "$script_dir/restore-desk-displays" "$restore_displays_tmp"
+mv -f "$restore_displays_tmp" "$OUTPUT_DIR/.local/bin/restore-desk-displays"
+show_display_state_tmp=$(mktemp "$OUTPUT_DIR/.local/bin/.show-display-state.XXXXXX")
+install -m 755 "$script_dir/show-display-state" "$show_display_state_tmp"
+mv -f "$show_display_state_tmp" "$OUTPUT_DIR/.local/bin/show-display-state"
+
+# SwiftBar menu-bar control for the display layout
+swiftbar_plugin_dir="$OUTPUT_DIR/.swiftbar"
+swiftbar_plugin_path="$swiftbar_plugin_dir/restore-desk-displays.1d.sh"
+mkdir -p "$swiftbar_plugin_dir"
+swiftbar_plugin_tmp=$(mktemp "$swiftbar_plugin_dir/.restore-desk-displays.XXXXXX")
+install -m 755 "$(dirname "$script_dir")/swiftbar/restore-desk-displays.1d.sh" "$swiftbar_plugin_tmp"
+mv -f "$swiftbar_plugin_tmp" "$swiftbar_plugin_path"
+defaults write com.ameba.SwiftBar PluginDirectory -string "$OUTPUT_DIR/.swiftbar"
+
 echo "MacOS setup complete."

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -eu
+
+displayplacer_bin="${DISPLAYPLACER_BIN:-/opt/homebrew/bin/displayplacer}"
+
+if [ ! -x "$displayplacer_bin" ]; then
+  /usr/bin/osascript -e 'display alert "Unable to inspect displays" message "displayplacer is not installed." as warning'
+  exit 1
+fi
+
+if ! displayplacer_output=$("$displayplacer_bin" list); then
+  /usr/bin/osascript -e 'display alert "Unable to inspect displays" message "displayplacer could not read the current display configuration." as warning'
+  exit 1
+fi
+
+display_state=$(printf '%s\n' "$displayplacer_output" | awk '
+  /^Resolutions for rotation/ { skipping_modes = 1; next }
+  /^Persistent screen id:/ { skipping_modes = 0 }
+  !skipping_modes { print }
+')
+
+/usr/bin/osascript \
+  -e 'on run argv' \
+  -e 'display dialog (item 1 of argv) with title "Current display state" buttons {"OK"} default button "OK"' \
+  -e 'end run' \
+  "$display_state"

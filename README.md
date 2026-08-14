@@ -42,3 +42,16 @@ Secrets are managed using 1Password CLI
 - Move desktop dock to right side
 - Set keyboard shortcuts
   - ctrl -> command key mapping
+
+# Display layout
+
+`restore-desk-displays` restores the desk layout configured with `displayplacer`:
+
+- 43-inch external monitor as the main display at 3200x1800, 60 Hz
+- MacBook display to its left and bottom-aligned at 1496x967, 120 Hz
+
+The macOS installer installs this command into `~/.local/bin` and configures a
+SwiftBar icon-only menu-bar control. Set **When connected to TV** to **Use as
+Extended Display** in macOS Display settings so the 43S405 is available before
+choosing **Restore desk layout**. The restore action leaves an intentional
+mirrored arrangement unchanged.

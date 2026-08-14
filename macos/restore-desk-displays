@@ -1,0 +1,48 @@
+#!/bin/sh
+
+set -eu
+
+displayplacer_bin="${DISPLAYPLACER_BIN:-/opt/homebrew/bin/displayplacer}"
+external_display_id="C99FDEBD-A721-400D-B146-5C03B3E18F48"
+display_detection_timeout="${DISPLAY_DETECTION_TIMEOUT:-15}"
+
+if [ ! -x "$displayplacer_bin" ]; then
+  /usr/bin/osascript -e 'display alert "Display layout not restored" message "displayplacer is not installed." as warning'
+  exit 1
+fi
+
+connected_displays=""
+detection_attempt=0
+while [ "$detection_attempt" -lt "$display_detection_timeout" ]; do
+  if connected_displays=$("$displayplacer_bin" list) &&
+    printf '%s\n' "$connected_displays" | grep -Fq "Persistent screen id: $external_display_id"; then
+    break
+  fi
+
+  detection_attempt=$((detection_attempt + 1))
+  sleep 1
+done
+
+if ! printf '%s\n' "$connected_displays" | grep -Fq "Persistent screen id: $external_display_id"; then
+  /usr/bin/osascript -e 'display alert "Display layout not restored" message "The 43-inch desk monitor was not detected within 15 seconds; the layout was left unchanged." as warning'
+  exit 0
+fi
+
+# A mirrored displayplacer profile joins the display IDs with `+`. Keep an
+# intentional mirror arrangement intact rather than applying the extended one.
+if printf '%s\n' "$connected_displays" | grep -Eq 'id:[^ "]*\+'; then
+  /usr/bin/osascript -e 'display alert "Display layout not restored" message "Displays are currently mirrored, so the layout was left unchanged." as warning'
+  exit 0
+fi
+
+apply_layout() {
+  # The monitor is already extended by macOS; restore its saved placement.
+  "$displayplacer_bin" \
+    "id:C99FDEBD-A721-400D-B146-5C03B3E18F48 res:3200x1800 hz:60 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" \
+    "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1496x967 hz:120 color_depth:8 enabled:true scaling:on origin:(-1496,683) degree:0"
+}
+
+apply_layout || {
+  sleep 2
+  apply_layout
+}
